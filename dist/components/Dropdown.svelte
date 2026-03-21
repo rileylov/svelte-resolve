@@ -88,7 +88,7 @@
 		align-items: center;
 		width: 100%;
 		padding: 8px 12px;
-		border: 1.5px solid #090909;
+		border: 2px solid #090909;
 		border-radius: 6px;
 		background: #1f1f1f;
 		color: #8a8a8a;
@@ -132,7 +132,7 @@
 		max-height: 280px;
 		overflow-y: auto;
 		background: #28282e;
-		border: 1.5px solid #090909;
+		border: 2px solid #090909;
 		border-top: none;
 		border-bottom-left-radius: 6px;
 		border-bottom-right-radius: 6px;
@@ -169,7 +169,7 @@
 		background: none;
 		color: #8a8a8a;
 		font-family: inherit;
-		font-size: 0.95rem;
+		font-size: 1.1rem;
 		text-align: left;
 		cursor: pointer;
 		outline: none;
