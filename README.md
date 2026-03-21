@@ -2,6 +2,12 @@
 
 A work in progress svelte component library that tries to replicate the look of Davinci Resolve inspired by [Bits UI](https://bits-ui.com/)
 
+## Installing
+
+```bash
+npm install svelte-resolve
+```
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
