@@ -104,6 +104,11 @@
 			</div>
 
 			<div class="variant">
+				<span class="label">Tooltip</span>
+				<Button tooltip="Anaylses the project">Analyze</Button>
+			</div>
+
+			<div class="variant">
 				<span class="label">Disabled</span>
 				<Button disabled>Analyze</Button>
 			</div>

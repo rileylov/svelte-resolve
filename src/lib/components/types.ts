@@ -25,6 +25,7 @@ export type CheckboxProps = Omit<HTMLButtonAttributes, 'children'> & {
 export type ButtonProps = Omit<HTMLButtonAttributes, 'children'> & {
 	variant?: 'default' | 'red';
 	disabled?: boolean;
+	tooltip?: string;
 	children: Snippet;
 };
 

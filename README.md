@@ -1,6 +1,6 @@
 # svelte-resolve
 
-A work in progress svelte component library that tries to replicate the look of Davinci Resolve inspired by [Bits UI](https://bits-ui.com/)
+A work in progress svelte component library that tries to replicate the look of Davinci Resolve
 
 ## Installing
 

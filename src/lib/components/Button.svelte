@@ -4,9 +4,22 @@
 	let {
 		variant = 'default',
 		disabled = false,
+		tooltip,
 		children,
 		...restProps
 	}: ButtonProps = $props();
+
+	let showTooltip = $state(false);
+	let hoverTimer: ReturnType<typeof setTimeout>;
+
+	function onmouseenter() {
+		hoverTimer = setTimeout(() => showTooltip = true, 500);
+	}
+
+	function onmouseleave() {
+		clearTimeout(hoverTimer);
+		showTooltip = false;
+	}
 </script>
 
 <button
@@ -14,13 +27,21 @@
 	data-variant={variant}
 	data-disabled={disabled || undefined}
 	{disabled}
+	{onmouseenter}
+	{onmouseleave}
+	onmousedown={() => { clearTimeout(hoverTimer); showTooltip = false; }}
 	{...restProps}
 >
 	{@render children()}
+
+	{#if tooltip && showTooltip}
+		<div data-resolve-tooltip="" role="tooltip">{tooltip}</div>
+	{/if}
 </button>
 
 <style>
 	[data-resolve-button] {
+		position: relative;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -70,5 +91,19 @@
 		background: #17181a;
 		color: #ffffff;
 		border-color: #ff6b5e;
+	}
+
+	[data-resolve-tooltip] {
+		position: absolute;
+		top: calc(100% + 6px);
+		left: calc(100% - 16px);
+		background: rgba(0, 0, 0, 0.75);
+		color: #ffffff;
+		font-family: inherit;
+		font-size: 0.85rem;
+		padding: 6px 10px;
+		white-space: nowrap;
+		z-index: 200;
+		pointer-events: none;
 	}
 </style>
